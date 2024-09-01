@@ -1,0 +1,19 @@
+.tags{
+    display:flex;
+    width:fit-content;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.sideButtons{
+    font-size:2vw;
+    height:fit-content;
+    width: fit-content;
+    float:right;
+    margin-top:5%;
+    
+}
+
+.bodyFont{
+    font-size:30px;
+}

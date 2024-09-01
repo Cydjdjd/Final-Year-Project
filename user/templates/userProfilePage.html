@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    {% load static %}
+    <link rel="stylesheet" href="/static/css/general/signuppage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page Contributor</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav ">
+                <li class="nav-item"><a class="nav-link" href="/user/homepage">User Home</a></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav float-right">
+                    <li class="nav-item"><a class="nav-link" href="/user/jobs">Find a job</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/careerCoachingPage">Career Coaching</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/articles">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/aboutPage">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/normalUserProfilePage">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-dark text-white entireForm mx-auto my-5 p-5">
+        <h4 class="font-weight-normal text-center">Normal User Profile Page</h4>
+        <div class="form">
+            <form action="/user/updateNormalUserProfilePage" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+    <div class="bg-dark text-white">
+        <p class="display-4 ">About Us</p>
+        <p class="details my-0">Made by:BlossomingJobs</p>
+        <p class="details my-0">Founded in:2024</p>
+        <p class="details my-0">Addess:15 Cardiff Road</p>
+        <p class="details my-0">Contact:61456976</p>
+    </div>
+</body>
+
+</html>

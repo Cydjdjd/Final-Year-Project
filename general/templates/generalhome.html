@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+  {% load static %}
+  <link rel="stylesheet" href="static/css/general/generalhome.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Homepage</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid ">
+      <ul class="navbar-nav ">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      </ul>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav float-right ">
+          <li class="nav-item nav-link"><a class="nav-link" href="/aboutPage">About</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="/loginpageUser">Login</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="/signuppageUser">Signup</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <p class="display-4 text-center">Job Finding</p>
+        <img src="{% static 'images/image1.jpg' %}" width="75%" height="50%" class="d-block mx-auto" alt="Job Finding">
+      </div>
+      <div class="carousel-item">
+        <p class="display-4 text-center">Upskilling</p>
+        <img src="{% static 'images/image2.jpg' %}" width="75%" height="50%" class="d-block mx-auto" alt="Upskilling">
+      </div>
+      <div class="carousel-item">
+        <p class="display-4 text-center">Career Coaching</p>
+        <img src="{% static 'images/image3.jpg' %}" width="75%" height="50%" class="d-block mx-auto"
+          alt="Career Coaching">
+      </div>
+      <div class="carousel-item">
+        <p class="display-4 text-center">Online Articles</p>
+        <img src="{% static 'images/image4.jpg' %}" width="75%" height="50%" class="d-block mx-auto"
+          alt="Online Articles">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+ 
+    <p class="text-boxes text-center bg-warning my-5 d-block">What are you?</p>
+    <div class="typeOfUser">
+    <p class="text-boxes mx-1 bg-secondary text-white d-inline user">User</p>
+    <p class="text-boxes mx-1 bg-secondary text-white d-inline">Contributor</p>
+  </div>
+  <p class="w-25 text-boxes mx-auto text-center bg-warning my-5 d-block">Testimonial</p>
+  <div class="testimonials">
+    <p class="bg-secondary text-white d-inline-block boxes boxesmarginright boxesmarginleft">This portal has helped me a
+      lot in terms pf employment.Highly recommended to use<br>-John,Job Finder</p>
+    <p class="bg-secondary text-white d-inline-block boxes boxesmarginright">I have been able to find capable employees
+      through this portal!<br><br>-Tom,Employer</p>
+    <p class="bg-secondary text-white d-inline-block boxes">The articles are very interesting and I have learnt a lot
+      <br><br>-Mary,Reader
+    </p>
+  </div>
+  <div class="bg-dark text-white">
+    <p class="display-4 ">About Us</p>
+    <p class="details my-0">Made by:BlossomingJobs</p>
+    <p class="details my-0">Founded in:2024</p>
+    <p class="details my-0">Addess:15 Cardiff Road</p>
+    <p class="details my-0">Contact:61456976</p>
+  </div>
+</body>
+
+</html>

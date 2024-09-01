@@ -1,0 +1,21 @@
+.body{
+    width:content-fit;
+    min-height:600px;
+}
+
+.header2{
+    font-size:25px;
+}
+
+.job{
+    color:black;
+}
+
+.tags{
+    display:flex;
+}
+
+.form1{
+    margin:1%;
+}
+

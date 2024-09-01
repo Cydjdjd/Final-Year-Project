@@ -1,0 +1,53 @@
+{% extends 'userbase.html' %}
+
+{% block content %}
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    {% load static %}
+    <link rel="stylesheet" href="/static/css/user/userArticles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Homepage</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav ">
+                <li class="nav-item"><a class="nav-link" href="/user/homepage">User Home</a></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav float-right">
+                    <li class="nav-item"><a class="nav-link" href="/user/jobs">Find a job</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/careerCoachingPage">Career Coaching</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/articles">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/aboutPage">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/normalUserProfilePage">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="my-3">
+        <p class="recommendedJobs">Recommended Jobs</p>
+    </div>
+    {% for article in articles %}
+    <div class="p-5 m-3 bg-secondary clearfix">
+        <div class="d-inline-block mx-5">
+            <p class="m-0 bodyFont">{{article.articleTitle}}</p>
+        </div>
+        <div class="sideButtons d-inline-block ">
+            <a class="p-2 mt-5 mx-2 text-dark bg-warning" href="/user/articleReadPage/{{article.id}}">Read article</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% endblock %}

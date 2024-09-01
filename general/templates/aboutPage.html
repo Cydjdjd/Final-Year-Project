@@ -1,0 +1,84 @@
+{% extends 'userbase.html' %}
+
+{% block content %}
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+  {% load static %}
+  <link rel="stylesheet" href="/static/css/user/userhomepage.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Homepage</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid ">
+      <ul class="navbar-nav ">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      </ul>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav float-right ">
+          <li class="nav-item nav-link"><a class="nav-link" href="/aboutPage">About</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="/loginpageUser">Login</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="/signuppageUser">Signup</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-dark text-white m-4">
+    <p class="display-4 p-2 text-center">What is this portal for?</p>
+    <p class="p-2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac posuere diam. Sed id quam vel odio varius
+      eleifend. Aenean facilisis vehicula tempus. Etiam quis lectus ornare, porta ipsum nec, egestas tortor. Vestibulum
+      elementum urna sapien, egestas placerat velit vulputate eu. Vivamus pretium luctus justo, in dictum ex eleifend
+      id. Curabitur non mauris ac mauris efficitur tincidunt sit amet sit amet mi. Praesent eleifend tortor eu metus
+      molestie, egestas porttitor velit mollis. Vivamus id sem leo. Aliquam ut odio sit amet eros bibendum laoreet ac id
+      nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac posuere diam. Sed id quam vel odio varius
+      eleifend. Aenean facilisis vehicula tempus. Etiam quis lectus ornare, porta ipsum nec, egestas tortor. Vestibulum
+      elementum urna sapien, egestas placerat velit vulputate eu. Vivamus pretium luctus justo, in dictum ex eleifend
+      id. Curabitur non mauris ac mauris efficitur tincidunt sit amet sit amet mi. Praesent eleifend tortor eu metus
+      molestie, egestas porttitor velit mollis. Vivamus id sem leo. Aliquam ut odio sit amet eros bibendum laoreet ac id
+      nibh.</p>
+  </div>
+  <div class="bg-dark text-white m-4">
+    <p class="display-4 p-2 text-center">Target Audience</p>
+    <p class="p-2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac posuere diam. Sed id quam vel odio varius
+      eleifend. Aenean facilisis vehicula tempus. Etiam quis lectus ornare, porta ipsum nec, egestas tortor. Vestibulum
+      elementum urna sapien, egestas placerat velit vulputate eu. Vivamus pretium luctus justo, in dictum ex eleifend
+      id. Curabitur non mauris ac mauris efficitur tincidunt sit amet sit amet mi. Praesent eleifend tortor eu metus
+      molestie, egestas porttitor velit mollis. Vivamus id sem leo. Aliquam ut odio sit amet eros bibendum laoreet ac id
+      nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac posuere diam. Sed id quam vel odio varius
+      eleifend. Aenean facilisis vehicula tempus. Etiam quis lectus ornare, porta ipsum nec, egestas tortor. Vestibulum
+      elementum urna sapien, egestas placerat velit vulputate eu. Vivamus pretium luctus justo, in dictum ex eleifend
+      id. Curabitur non mauris ac mauris efficitur tincidunt sit amet sit amet mi. Praesent eleifend tortor eu metus
+      molestie, egestas porttitor velit mollis. Vivamus id sem leo. Aliquam ut odio sit amet eros bibendum laoreet ac id
+      nibh.</p>
+  </div>
+  <div class="bg-dark text-white m-4">
+    <p class="display-4 p-2 text-center">Our Vision</p>
+    <p class="p-2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac posuere diam. Sed id quam vel odio varius
+      eleifend. Aenean facilisis vehicula tempus. Etiam quis lectus ornare, porta ipsum nec, egestas tortor. Vestibulum
+      elementum urna sapien, egestas placerat velit vulputate eu. Vivamus pretium luctus justo, in dictum ex eleifend
+      id. Curabitur non mauris ac mauris efficitur tincidunt sit amet sit amet mi. Praesent eleifend tortor eu metus
+      molestie, egestas porttitor velit mollis. Vivamus id sem leo. Aliquam ut odio sit amet eros bibendum laoreet ac id
+      nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac posuere diam. Sed id quam vel odio varius
+      eleifend. Aenean facilisis vehicula tempus. Etiam quis lectus ornare, porta ipsum nec, egestas tortor. Vestibulum
+      elementum urna sapien, egestas placerat velit vulputate eu. Vivamus pretium luctus justo, in dictum ex eleifend
+      id. Curabitur non mauris ac mauris efficitur tincidunt sit amet sit amet mi. Praesent eleifend tortor eu metus
+      molestie, egestas porttitor velit mollis. Vivamus id sem leo. Aliquam ut odio sit amet eros bibendum laoreet ac id
+      nibh.</p>
+  </div>
+
+
+  {% endblock %}

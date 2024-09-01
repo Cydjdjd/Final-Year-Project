@@ -1,0 +1,23 @@
+#header{
+    width:fit-content;
+    text-align:center;
+    padding:1% 15%;
+    font-size:30px;
+}
+
+.boxes{
+    width:fit-content;
+    text-align:center;
+    padding: 10% 1%;
+    font-size:30px;
+    display:inline-block;
+}
+.bottomBoxes{
+    width:84%;
+}
+.body{
+    margin:2%;
+    padding-top:5%;
+    padding-bottom:5%;
+    background-color: lightgrey;
+}

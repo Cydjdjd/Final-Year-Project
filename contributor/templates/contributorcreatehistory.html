@@ -1,0 +1,57 @@
+{% extends 'contributorbase.html' %}
+
+{% block content %}
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    {% load static %}
+    <link rel="stylesheet" href="/static/css/contributor/contributorcreatehistory.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contributor Homepage</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav ">
+                <li class="nav-item"><a class="nav-link" href="/contributor/homepage">Contributor Home</a></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav float-right">
+                    <li class="nav-item"><a class="nav-link" href="/contributor/createPage1">Create Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contributor/createhistorypage">Create History</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/contributor/contributorProfilePage">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contributor/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="tags mt-3">
+        <p class="job border border-dark text-center d-inline bg-warning text-dark rounded-left p-1"><a class="text-dark" href="/contributor/createhistorypage">Job Posting</a></p>
+        <p class="course border border-dark text-center d-inline bg-light p-1"><a class="text-dark" href="/contributor/createhistorypage2">Course</a></p>
+        <p class="article border border-dark text-center d-inline bg-light text-dark rounded-right p-1"><a class="text-dark" href="/contributor/createhistorypage3">Article</a></p>
+    </div>
+    <p>Created Jobs</p>
+    {% for job in jobs %}
+    <div class="p-5 m-3 bg-secondary clearfix">
+        <img class="float-left" src="../../media/{{job.companyPicture}}" alt="Google" width="150vw" height="150vw">
+        <div class="d-inline-block mx-5">
+            <p class="m-0 bodyFont">{{job.companyName}}</p>
+            <p class="m-0 bodyFont">{{job.jobTitle}}</p>
+            <p class="m-0 bodyFont">{{job.jobSalary}}</p>
+        </div>
+        <div class="sideButtons d-inline-block ">
+            <a class="p-2 mt-5 mx-2 text-dark bg-warning" href="/contributor/editPage1/{{job.id}}">Edit Details</a>
+            
+            <a class="p-2 mt-5 mx-2 text-dark bg-warning" href="/contributor/jobApplicationDetail/{{job.id}}">View applicants</a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

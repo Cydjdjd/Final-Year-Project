@@ -1,0 +1,19 @@
+.searchbar{
+    width:fit-content;
+}
+.recommendedJobs{
+    font-size: 2vw;;
+}
+
+.sideButtons{
+    font-size:2vw;
+    height:fit-content;
+    width: fit-content;
+    float:right;
+    margin-top:1%;
+    
+}
+
+.bodyFont{
+    font-size:30px;
+}

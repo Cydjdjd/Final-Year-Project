@@ -1,0 +1,35 @@
+.boxes{
+    width:20%;
+    font-size:1vw;
+    padding:1vw 2vw 5vw;  
+}
+.boxesmarginleft{
+    margin-left:10%;
+}
+.boxesmarginright{
+    margin-right:10%;
+}
+.details{
+    font-size:1vw;
+}
+.testimonials{
+    width:fit-content;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5%;
+}
+.typeOfUser{
+    width:fit-content;
+    margin-left:auto;
+    margin-right:auto;
+}
+.text-boxes{
+    width:fit-content;
+    font-size:3vw;
+    padding:0vw 1vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+.user{
+    padding:0px 6vw;
+}
